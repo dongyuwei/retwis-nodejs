@@ -109,7 +109,7 @@ app.post('/post', authenticated, function(req, res) {
 
 app.get('/:username', authenticated, function(req, res){
   var current_user = req.session["user"]
-  User.find_by_username(req.params.username, function(err, user) {
+  User.find_by_username(current_user.username, function(err, user) {
     User.posts(user.id, 1, function(err, posts) {
       User.followers(user.id, function(err, followers) {
         User.followees(user.id, function(err, followees) {

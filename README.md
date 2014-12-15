@@ -1,19 +1,12 @@
 Retwis-node.js
 ==============
+A twitter clone by redis and nodejs.
 
-A node.js port of Daniel Lucraft's example twitter app https://github.com/danlucraft/retwis-rb using Redis as the data store.
+This project is cloned from https://github.com/zsolt/retwis-nodejs by Zsolt Szász (zsolt@lorecraft.com). I fixed some bugs and add a package.json to explicitly declare all the dependencies.
 
-Zsolt Szász (zsolt@lorecraft.com)
 
-Requirements
-------------
+Tested with redis 2.8.6 and node v0.10.5, it works for me :)
 
- * node.js: http://nodejs.org/
- * Express: http://expressjs.com
- * Redis: http://code.google.com/p/redis/
- * Redis node client: https://github.com/mranney/node_redis
- * Step: https://github.com/creationix/step
- * hashlib: https://github.com/brainfucker/hashlib
 
 License
 -------

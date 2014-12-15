@@ -1,7 +1,5 @@
-var sys = require("sys"),
-    hashlib = require("hashlib")
-    Step = require('step')
-
+var sys = require("sys"), step = require('step');
+var crypto = require('crypto'), md5er = crypto.createHash('md5');
 
 Date.prototype.when = function() {
 
@@ -50,7 +48,8 @@ User.generateSalt = function() {
 }
 
 User.hash_pw = function(salt, password) {
-  return hashlib.sha1(salt + password)
+  md5er.update(salt + password);
+  return md5er.digest('hex');
 }
 
 User.create = function(username, password, callback) {
@@ -190,7 +189,7 @@ User.addPost = function(user_id, post, callback) {
 };
 
 User.addMention = function(userName, postId, callback) {
-  Step(
+  step(
     function() {
       User.find_by_username(userName, this);
     },
@@ -211,7 +210,7 @@ User.addMention = function(userName, postId, callback) {
 }
 
 User.mentions = function(userName, page, callback) {
-  Step(
+  step(
     function() {
       User.find_by_username(userName, this);
     },
@@ -357,7 +356,7 @@ Post.find_by_id = function(postId, callback) {
 Post.create = function(user, content, callback) {
   var post = null;
   
-  Step(
+  step(
     function() {
       RedisClient.incr("post:uid", this) 
     },

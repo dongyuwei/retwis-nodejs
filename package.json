@@ -1,0 +1,19 @@
+{
+  "name": "retwis-nodejs",
+  "version": "0.0.1",
+  "description": "Retwis-node.js, a twitter clone by redis and nodejs",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongyuwei/retwis-nodejs"
+  },
+  "author": "",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "redis": "0.12.1",
+    "express": "2.5.9",
+    "ejs": "1.0.0",
+    "step": "0.0.5"
+  }
+}
