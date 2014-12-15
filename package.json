@@ -5,9 +5,10 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dongyuwei/retwis-nodejs"
+    "url": "https://github.com/dongyuwei/twitter-clone"
   },
-  "author": "",
+  "author": "Zsolt Szász",
+  "contributors": ["newdongyuwei@gmail.com"],
   "license": "BSD",
   "readmeFilename": "README.md",
   "dependencies": {
