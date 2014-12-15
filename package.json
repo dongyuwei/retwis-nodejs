@@ -5,7 +5,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dongyuwei/twitter-clone"
+    "url": "https://github.com/dongyuwei/retwis-nodejs"
   },
   "author": "Zsolt Szász",
   "contributors": ["newdongyuwei@gmail.com"],
